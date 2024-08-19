@@ -1,0 +1,179 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<!-- Header Close -->
+
+<section class="page-title bg-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">About Us</span>
+          <h1 class="text-capitalize mb-4 text-lg">Our Company</h1>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item text-white-50">About Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section About Start -->
+<section class="section about-2 position-relative">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="about-item pr-3 mb-5 mb-lg-0">
+					<span class="h6 text-color">What we are</span>
+					<h2 class="mt-3 mb-4 position-relative content-title">We Provide Trusted &
+Best Consulting</h2>
+					<p class="mb-5">Compus, is a leading corporate and tax consulting firm that provides comprehensive advisory and compliance services to businesses of all sizes. With a team of highly skilled professionals and extensive industry expertise, we offer tailored solutions to help our clients navigate complex corporate and tax challenges and optimize their financial performance. Our commitment to delivering exceptional service, strategic insights, and innovative solutions has made us a trusted partner for numerous organizations across various industries.</p>
+
+<p>Also, a firm dedicated to providing exceptional financial services to businesses and individuals. With a team of experienced accountants and a commitment to accuracy, reliability, and integrity, we offer a comprehensive range of accounting solutions tailored to meet the unique needs of our clients. Our goal is to empower our clients to make informed financial decisions, optimize their financial health, and achieve their business objectives.</p>
+
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</section>
+
+<!-- Section About End -->
+ 
+<section class="about-info section pt-0">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="about-info-item mb-4 mb-lg-0">
+					<h3 class="mb-3"><span class="text-color mr-2 text-md ">01.</span>Our Mission</h3>
+					<p>We strive to empower businesses to achieve excellence and sustainable growth. Our aim is to be recognized for our financial expertise, integrity, and unparalleled client value.
+
+					</p>
+				</div>		
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="about-info-item mb-4 mb-lg-0">
+					<h3 class="mb-3"><span class="text-color mr-2 text-md">02.</span>Vision</h3>
+					<p>We provide businesses with strategic guidance and innovative solutions for long-term success. Our focus is on delivering value through accurate financial insights and comprehensive accounting services, fostering growth and trusted relationships.</p>
+				</div>		<br>
+			</div>
+
+			<div class="col-lg-12">
+				<div class="about-item pr-3 mb-5 mb-lg-0">
+					
+					<h3 class="mb-3"><span class="text-color mr-2 text-md">03.</span>Our Approach</h3> <br>
+
+					<h4>Tailored Solutions</h4>
+					<p class="mb-5">We recognize that each client is unique, and we develop customized strategies and solutions that align with their specific requirements, industry dynamics, and long-term objectives.</p>
+                  
+					<h4>Expertise and Industry Knowledge</h4>
+					<p class="mb-5">Our team comprises highly skilled professionals with in-depth knowledge of corporate and tax consulting. We stay updated with the latest regulations, industry trends, and best practices to provide our clients with accurate and relevant advice.</p>
+ 
+					<h4>Collaboration</h4>
+					<p class="mb-5">We foster a collaborative approach, working closely with our clients to gain a deep understanding of their businesses. By building strong partnerships, we can provide proactive guidance and support throughout their journey.</p>
+
+					<h4>Integrity and Confidentiality</h4>
+					<p class="mb-5">We prioritize the highest ethical standards, maintaining strict confidentiality of our clients’ information and delivering services with integrity, transparency, and professionalism.</p>
+
+					<h4>Long-term Value</h4>
+					<p class="mb-5">Our focus is on delivering long-term value to our clients. We strive to go beyond immediate solutions and provide insights and strategies that help our clients achieve sustainable growth and success.</p>
+
+				
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+<!--  Section Services Start -->
+<section class="section team">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+					<span class="h6 text-color">Our Team</span>
+					<h2 class="mt-3 content-title">Directors of Compus</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			{% for x in team %}
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="team-item-wrap mb-5">
+					<div class="team-item position-relative">
+						<img loading="lazy" src="{{x.image.url}}" alt="team" class="img-fluid w-100">
+						<div class="team-img-hover">
+							<ul class="team-social list-inline">
+								{% if x.facebook %}
+								<li class="list-inline-item">
+									<a href="{{x.facebook}}" class="facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+								</li>
+								{% endif %}
+								{% if x.twitter %}
+								<li class="list-inline-item">
+									<a href="https://twitter.com/themefisher" class="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+								</li>
+								{% endif %}
+								{% if x.instagram %}
+								<li class="list-inline-item">
+									<a href="https://www.instagram.com/themefisher/" class="instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+								</li>
+								{% endif %}
+								{% if x.linkedin %}
+								<li class="list-inline-item">
+									<a href="https://themefisher.com/" class="linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+								</li>
+								{% endif %}
+							</ul>
+						</div>
+					</div>
+					<div class="team-item-content">
+						<h4 class="mt-3 mb-0 text-capitalize">{{x.name}}</h4>
+						<p>{{x.position}}</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!--  Section Services End -->
+<!-- Section Testimonial Start -->
+<section class="section testimonial bg-gray">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+					<span class="h6 text-color">Clients testimonial</span>
+					<h2 class="mt-3 content-title">Check what's our clients say about us</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="testimonial-wrap">
+			{% for x in testi %}
+			<div class="testimonial-item position-relative">
+				<i class="ti-quote-left text-color"></i>
+
+				<div class="testimonial-item-content">
+					<p class="testimonial-text">{{x.message}}</p>
+
+					<div class="testimonial-author">
+						<h5 class="mb-0 text-capitalize">{{x.by_name}}</h5>
+						<p>{{x.position}}</p>
+					</div>
+				</div>
+			</div>
+			
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Section Testimonial End -->
+
+{% endblock content %}

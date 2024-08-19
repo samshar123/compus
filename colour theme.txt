@@ -1,0 +1,7 @@
+primary colour: #234186
+
+Secondary colour: #999ea1
+
+
+
+
