@@ -10,8 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout branch to main
-    - uses: actions/checkout@v4
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.3
       with:
